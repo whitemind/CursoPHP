@@ -27,14 +27,28 @@ require_once("config.php");
 
 //echo $usuario;
 
-$aluno = new Usuario("Bruno Amaro","654897");
+//Criando um novo usuario
+//$aluno = new Usuario("Bruno Amaro","654897");
 
 //$aluno->setDeslogin("aluno");
 //$aluno->setDessenha("123987");
 
-$aluno->insert();
+//$aluno->insert();
 
+//Update de um usuario
+//$usuario = new Usuario();
 
-echo $aluno;
+//$usuario->loadById(8);
+//$usuario->update("Carla","654987");
+
+//echo $usuario;
+
+$usuario = new Usuario();
+
+$usuario->loadById(7);
+
+$usuario->delete();
+
+echo $usuario;
 
  ?>

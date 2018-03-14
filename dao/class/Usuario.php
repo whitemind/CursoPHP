@@ -133,6 +133,36 @@ class Usuario{
 
 	}
 
+	public function update($login, $password){
+
+		$this->setDesLogin($login);
+		$this->setDesSenha($password);
+
+		$sql = new Sql();
+
+		$sql->query("UPDATE tb_usuarios SET desLogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+			':LOGIN'=>$this->getDesLogin(),
+			':PASSWORD'=>$this->getDesSenha(),
+			':ID'=>$this->getIdUsuario()
+		));
+
+	}
+
+	public function delete(){
+
+		$sql = new Sql();
+
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+			':ID'=>$this->getIdUsuario()
+		));
+
+		$this->setIdUsuario(0);
+		$this->setDesLogin("");
+		$this->setDesSenha("");
+		$this->setDtCadastro(new DateTime);
+
+	}
+
 	public function setData($data){
 
 			$this->setIdUsuario($data['idusuario']);
