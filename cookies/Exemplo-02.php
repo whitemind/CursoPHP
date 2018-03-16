@@ -7,6 +7,6 @@ if (isset($_COOKIE["NOME_DO_COOKIE"])) {
 
 	echo $obj->empresa;
 
-}
+}	
 
  ?>
