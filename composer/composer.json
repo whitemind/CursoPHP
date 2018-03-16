@@ -1,0 +1,16 @@
+{
+    "name": "hcodebr/composer",
+    "description": "Aula de php 7",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Guilherme Ribeiro",
+            "email": "guilherme.filipe.ribeiro@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog":"1.0.*"
+    }
+    
+}
