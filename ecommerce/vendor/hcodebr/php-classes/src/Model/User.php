@@ -82,7 +82,7 @@ class User extends Model {
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_users u INNER JOIN tb_person p USING(idperson) ORDER BY p.desperson");
+		return $sql->select("SELECT * FROM tb_users u INNER JOIN tb_persons p USING(idperson) ORDER BY p.desperson");
 
 	}
 
