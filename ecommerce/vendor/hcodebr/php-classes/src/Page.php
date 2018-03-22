@@ -14,7 +14,7 @@ class Page {
 		"data"=>[]
 	];
 
-	public function __construct($opts = array(), $tpl_dir = "C:/xampp/htdocs/CursoPHP/ecommerce/views/")
+	public function __construct($opts = array(), $tpl_dir = "views/")
 	{
 
 		$this->options = array_merge($this->defaults, $opts);
@@ -22,7 +22,7 @@ class Page {
 		$config = array(
 		    "base_url"      => null,
 		    "tpl_dir"       => $tpl_dir,
-		    "cache_dir"     => "C:/xampp/htdocs/CursoPHP/ecommerce/views-cache/",
+		    "cache_dir"     => "views-cache/",
 		    //"tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/views/",
 		    //"cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
 		    "debug"         => false
